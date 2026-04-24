@@ -1,8 +1,17 @@
 import React from 'react'
 
-export function Card({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) {
+export function Card({
+  children,
+  className,
+  style
+}: {
+  children: React.ReactNode
+  className?: string
+  style?: React.CSSProperties
+}) {
   return (
     <div
+      className={className}
       style={{
         background: 'white',
         borderRadius: '8px',
