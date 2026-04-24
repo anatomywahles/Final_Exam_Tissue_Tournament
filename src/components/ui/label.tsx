@@ -1,26 +1,10 @@
 import React from 'react'
 
-export function Label({
-  children,
-  htmlFor,
-  className,
-  style
-}: {
-  children: React.ReactNode
-  htmlFor?: string
-  className?: string
-  style?: React.CSSProperties
-}) {
+export function Label({ className = '', children, ...props }: any) {
   return (
     <label
-      htmlFor={htmlFor}
-      className={className}
-      style={{
-        display: 'block',
-        marginBottom: '0.25rem',
-        fontWeight: 500,
-        ...style
-      }}
+      className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${className}`}
+      {...props}
     >
       {children}
     </label>
